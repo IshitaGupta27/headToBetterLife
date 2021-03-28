@@ -1,4 +1,4 @@
-# headToBetterLife
+# Head To Better Life
 
 Use of technology to deal with the issue of mental health. A report by the World Health Organization (WHO) revealed that 7.5 percent of the Indian population suffers from some form of mental disorder. Mental illnesses constitute one-sixth of all health-related disorders and India accounted for nearly 15% of the global mental, neurological and substance abuse disorder burden. The treatment gap, which is defined as the prevalence of mental illnesses and the proportion of patients that get treatment, is over 70 percent. WHO also predicts that by 2020, roughly 20 percent of India will suffer from mental illnesses. And to cater to this demographic, we have less than 4,000 mental health professionals. Developing a web application that targets people who are suffering from mental health issues may resolve the problems to some extent.
 
