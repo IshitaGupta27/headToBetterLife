@@ -1,0 +1,223 @@
+*:focus {
+  outline: 0;
+}
+
+body {
+  text-align: justify;
+  /* background-color: #f7f6e7; */
+}
+.hero-wrap {
+  max-height: 500px;
+}
+
+.banner-image {
+  /* position: relative; */
+
+  background-size: 100% 100%;
+}
+
+.slider-text {
+  height: 310px;
+  margin-left: 20%;
+}
+
+.banner-text {
+  font-family: fantasy;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+#page-frame {
+  font-family: "proxima-nova-soft";
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  outline: none;
+  position: relative;
+  /* background-color: #f7f6e7; */
+}
+#page-left-side {
+  width: 20%;
+  flex-direction: column;
+  position: relative;
+  background-color: #ffff;
+}
+.left-side-summary {
+  float: left;
+  padding-left: 0px;
+  margin-left: 0px;
+  border: solid brown 2px;
+  border-radius: 25px;
+  top: 0;
+  left: 8%;
+}
+
+#page-summary h6 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#page-summary ul li {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#page-summary-heading {
+  margin-top: 10px;
+}
+
+#page-summary-heading,
+.page-summary-item a {
+  color: brown;
+}
+h6,
+.h6 {
+  font-size: 14px;
+}
+
+#page-center {
+  position: relative;
+  margin-left: 20%;
+}
+
+#page-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+#page-content .text-section,
+#page-content .overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: calc(80% - 20px);
+  font-size: 15px;
+  line-height: 23px;
+  color: #4a4848;
+}
+
+#page-content blockquote {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+blockquote {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+
+#page-content blockquote span {
+  font-family: "phoreuscherokee";
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 38px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.Title1 {
+  color: #1181ae;
+}
+
+#page-content blockquote footer {
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+#page-content blockquote footer cite {
+  font-size: 20px;
+}
+
+#page-content .text-section {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#page-content .text-section.text-section > h3,
+#page-content .overview.text-section > h3,
+#page-content .image-besides-text-section.text-section > h3,
+#page-content .text-section.text-section > h4,
+#page-content .overview.text-section > h4,
+#page-content .image-besides-text-section.text-section > h4 {
+  font-size: 29px;
+  line-height: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.Title2 {
+  color: #9b255d;
+}
+.h1,
+.h2,
+.h3,
+h1,
+h2,
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+#page-content .text-section p {
+  margin-bottom: 0;
+  color: #2c2b2b;
+}
+
+.thumbnail {
+  padding: 0;
+  border: 0;
+}
+
+.item {
+  background: #f6f5f5;
+  text-align: center;
+  height: 360px;
+  width: 800px;
+}
+
+.carousel-control {
+  color: #1181ae;
+}
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next,
+.carousel-control .icon-prev {
+  font-size: 50px;
+}
+
+a.carousel-control.left,
+a.carousel-control.right {
+  background-color: #ffff;
+  background-image: none;
+}
+
+.carousel-caption {
+  margin: auto;
+  text-shadow: none;
+}
