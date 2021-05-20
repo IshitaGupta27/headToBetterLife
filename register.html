@@ -21,7 +21,7 @@
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
-                        <form method="POST" class="register-form" id="register-form" action="#">
+                        <form method="POST" class="register-form" id="register-form" action="./php/register.php">
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" id="name" placeholder="Your Name" required />
@@ -43,16 +43,16 @@
                                 <input type="date" id="dob" class = "dob" name="dob" required />
                             </div>
                             <div class="form-group">
-                                <input type="radio" name="radiogen" id="radiogen" class="radiogen" />
+                                <input type="radio" name="radiogen" id="radiogen" class="radiogen" value="Male"/>
                                 <label for="radiogen" class="label-radiogen"><span><span></span></span>Male </label>
-                                <input type="radio" name="radiogen" id="radiogen" class="radiogen" />
+                                <input type="radio" name="radiogen" id="radiogen" value="Female" class="radiogen" />
                                 <label for="radiogen" class="label-radiogen"><span><span></span></span>Female </label>
-                                <input type="radio" name="radiogen" id="radiogen" class="radiogen" />
+                                <input type="radio" name="radiogen" id="radiogen" class="radiogen" value="Transgender" />
                                 <label for="radiogen" class="label-radiogen"><span><span></span></span>Transgender</label>
                             </div>
                             
                             <div class="form-group form-button">
-                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                                <button type="submit" name="signup" id="signup" class="form-submit" value="Register" onclick="alert('Successfully Registered')"> Register </button>
                                 <a href="index.html" class="backbtn">Home</a>
                             </div>
                         </form>
