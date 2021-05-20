@@ -8468,7 +8468,7 @@ h1, h2, h3, h4, h5,
   position: relative; }
   @media (min-width: 768px) {
     .ftco-intro .intro {
-      margin-top: -70px; } }
+      margin-top: 10px; } }
   .ftco-intro .intro.aside-stretch {
     background: #589167; }
     .ftco-intro .intro.aside-stretch:after {
