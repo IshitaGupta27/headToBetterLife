@@ -611,16 +611,16 @@ Signs alcohol or drug use may be a problem :-
     		<div class="row">
     			<div class="col-md-6 half ftco-animate">
     				<h2 class="mb-4">Send a Message &amp; Get in touch!</h2>
-    				<form action="#" class="appointment">
+    				<form action="submit_message.php" class="appointment">
     					<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-			              <input type="text" class="form-control" placeholder="Your Name">
+			              <input type="text" class="form-control" name = "name" placeholder="Your Name">
 			            </div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-			              <input type="text" class="form-control" placeholder="Email">
+			              <input type="text" class="form-control" name = "email" placeholder="Email">
 			            </div>
 								</div>
 								<div class="col-md-12">
@@ -628,21 +628,21 @@ Signs alcohol or drug use may be a problem :-
 			    					<div class="form-field">
 	          					<div class="select-wrap">
 	                      <div class="icon"><span class="fa fa-chevron-down"></span></div>
-	                      <select name="" id="" class="form-control">
+	                      <select name="disease" id="" class="form-control">
 	                      	<option value="">Services</option>
-	                        <option value="">Anxiety Disorders</option>
-	                        <option value="">Bipolar and Related Disorders</option>
-	                        <option value="">Depressive Disorders</option>
-	                        <option value="">Addictive Disorders</option>
-	                        <option value="">Eating Disorders</option>
-	                        <option value="">Obsessive-Compulsive and Related Disorders</option>
-							<option value="">Personality Disorders</option>
-							<option value="">Schizophrenia and Psychotic Disorders</option>
-							<option value="">Trauma and Stress Related Disorders</option>
-							<option value="">Grief and loss when caring</option>
-							<option value="">Self Harm</option>
-							<option value="">Suicidal Thoughts</option>
-							<option value="">Domestic Violence</option>
+	                        <option value="Anxiety">Anxiety Disorders</option>
+	                        <option value="BRD">Bipolar and Related Disorders</option>
+	                        <option value="Depressive">Depressive Disorders</option>
+	                        <option value="Addictive">Addictive Disorders</option>
+	                        <option value="Eating">Eating Disorders</option>
+	                        <option value="OCRD">Obsessive-Compulsive and Related Disorders</option>
+							<option value="Personality">Personality Disorders</option>
+							<option value="SPD">Schizophrenia and Psychotic Disorders</option>
+							<option value="Trauma">Trauma and Stress Related Disorders</option>
+							<option value="Grief">Grief and loss when caring</option>
+							<option value="Self_harm">Self Harm</option>
+							<option value="Suicidal">Suicidal Thoughts</option>
+							<option value="Domestic_violence">Domestic Violence</option>
 	                      </select>
 	                    </div>
 			              </div>
@@ -650,7 +650,7 @@ Signs alcohol or drug use may be a problem :-
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-			              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+			              <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
 			            </div>
 								</div>
 								<div class="col-md-12">
