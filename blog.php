@@ -205,8 +205,8 @@ while($row = mysqli_fetch_array($query))
                         <h2 class="ftco-heading-2">Explore</h2>
                         <ul class="list-unstyled">
                             <li><a href="about.html"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
-                            <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
-                            <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>What We Do</a></li>
+                            <li><a href="index.html"><span class="fa fa-chevron-right mr-2"></span>Services</a></li>
+                            <!--<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>What We Do</a></li>-->
                             <!-- <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Plans &amp; Pricing</a></li> -->
                         </ul>
                     </div>
@@ -230,7 +230,7 @@ while($row = mysqli_fetch_array($query))
                         <div class="block-23 mb-3">
                             <ul>
                                 <!-- <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li> -->
-                                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+1234567889</span></a></li>
+                                <!--<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+1234567889</span></a></li>-->
                                 <li><a href="#"><span class="icon fa fa-envelope"></span><span class="text">headtobetterlife@gmail.com</span></a></li>
                             </ul>
                         </div>
