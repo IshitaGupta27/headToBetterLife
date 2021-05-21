@@ -82,12 +82,12 @@
     </div>
 </nav>
 
-<div class="hero-wrap " style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+<div class="hero-wrap " style="background-image: url('images/book.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
 
-        <h1 style="text-align:center;color:aliceblue">“Books are the quietest and most constant of friends; they are the most accessible and wisest of counselors, and the most patient of teachers.”
-        </h1>
+<!--         <h1 style="text-align:center;color:aliceblue">“Books are the quietest and most constant of friends; they are the most accessible and wisest of counselors, and the most patient of teachers.”
+        </h1> -->
     </div>
 </div>
 
