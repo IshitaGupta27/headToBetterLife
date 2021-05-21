@@ -13,42 +13,6 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
-	<style>
-		.dropbtn {
-      background-color: #04AA6D;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-    }
-    
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-    
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-    
-    .dropdown-content a:hover {background-color: #ddd;}
-    
-    .dropdown:hover .dropdown-content {display: block;}
-    
-    .dropdown:hover .dropbtn {background-color: #3e8e41;}
-	</style>
   </head>
   <body>
   <div class="wrap">
@@ -81,8 +45,8 @@
 				<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="about.php" class="nav-link">About Us</a></li>
 	          <li class="nav-item"><a href="#disease" class="nav-link">Disease</a></li>
-	          <li class="nav-item"><a href="book.php" class="nav-link">Books</a></li>
-	          <li class="nav-item"><a href="songs.php" class="nav-link">Music</a></li>
+	          <li class="nav-item"><a href="books.php" class="nav-link">Books</a></li>
+	          <li class="nav-item"><a href="song.php" class="nav-link">Music</a></li>
 			  <li class="nav-item"><a href="forum.php" class="nav-link">Discussion Forum</a></li>
 	          <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="./php/logout.php" class="nav-link">Logout</a></li>
@@ -94,6 +58,7 @@
 			  <li class="nav-item"><a href="#disease" class="nav-link">Disease</a></li>
 	          <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+			<li class="nav-item"><a href="#send_message" class="nav-link">Contact Us</a></li>
 			<?php } ?>
 	        </ul>
 	      </div>
@@ -101,14 +66,14 @@
 	  </nav>
     <!-- END nav -->
     
-    <div class="hero-wrap" style="background-image: url('images/homeimage.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap" style="background-image: url('images/home.jpeg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center">
           <div class="col-md-6 ftco-animate d-flex align-items-end">
           	<div class="text w-100">
-	            <!-- <h1 class="mb-4">Revitalized Minds</h1>
-	            <p class="mb-4">Some of the most comforting words in the universe are ‘me too.’ That moment when you find out that your struggle is also someone else’s struggle, that you’re not alone, and that others have been down the same road.</p> -->
+	             <h1 class="mb-4">Revitalized Minds</h1>
+	            <p class="mb-4">Some of the most comforting words in the universe are ‘me too.’ That moment when you find out that your struggle is also someone else’s struggle, that you’re not alone, and that others have been down the same road.</p> 
 	            <p><a href="about.php" class="btn btn-primary py-3 px-4">About us</a> <a href="#send_message" class="btn btn-white py-3 px-4">Contact Us</a></p>
             </div>
           </div>
@@ -745,8 +710,9 @@ Signs alcohol or drug use may be a problem :-
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
               <div class="text text-center">
-              	<a href="blog-single.html" class="block-20 img" style="background-color: #f19292">
-	              </a>
+              	<!-- <a href="blog.php" class="block-20 img" >
+	              </a> -->
+				  <img src="images/blog1.jpeg" class="block-20 img"/>
                 <!--
 	              <div class="meta text-center mb-2 d-flex align-items-center justify-content-center">
                 	<div>
@@ -764,8 +730,9 @@ Signs alcohol or drug use may be a problem :-
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
               <div class="text text-center">
-              	<a href="blog-single.html" class="block-20 img" style="background-color: #cbe2b0">
-                </a>
+              	<!-- <a href="blog-single.html" class="block-20 img" style="background-color: #cbe2b0">
+                </a> -->
+				<img src="images/blog2.jpeg" class="block-20 img"/>
                 <!--
                 <div class="meta text-center mb-2 d-flex align-items-center justify-content-center">
                   <div>
@@ -783,8 +750,9 @@ Signs alcohol or drug use may be a problem :-
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
               <div class="text text-center">
-              	<a href="blog-single.html" class="block-20 img" style="background-color: #fcf7bb">
-                </a>
+              	<!-- <a href="blog-single.html" class="block-20 img" style="background-color: #fcf7bb">
+                </a> -->
+				<img src="images/blog3.jpeg" class="block-20 img"/>
                 <!--
                 <div class="meta text-center mb-2 d-flex align-items-center justify-content-center">
                   <div>

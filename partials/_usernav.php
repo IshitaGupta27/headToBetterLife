@@ -27,11 +27,10 @@ echo '  <div class="wrap">
         <ul class="navbar-nav ml-auto">
         <li class="nav-item active"><a href="./index.php" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="./about.php" class="nav-link">About Us</a></li>
-        <li class="nav-item"><a href="./index.php" class="nav-link">About Us</a></li>
-        <li class="nav-item"><a href="./book.php" class="nav-link">Books</a></li>
-        <li class="nav-item"><a href="./songs.php" class="nav-link">Music</a></li>
+        <li class="nav-item"><a href="./books.php" class="nav-link">Books</a></li>
+        <li class="nav-item"><a href="./song.php" class="nav-link">Music</a></li>
         <li class="nav-item"><a href="./forum.php" class="nav-link">Discussion Forum</a></li>
-        <li class="nav-item"><a href="./blog.php" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="./writeblog.php" class="nav-link">Blog</a></li>
         <li class="nav-item"><a href="./php/logout.php" class="nav-link">Logout</a></li>
         <li class="nav-item">Welcome,', $_SESSION['username'],'</li>
            

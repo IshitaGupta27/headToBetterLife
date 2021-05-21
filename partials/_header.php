@@ -30,6 +30,7 @@ echo '  <div class="wrap">
 	          <li class="nav-item"><a href="./index.php" class="nav-link">Disease</a></li>
 	          <li class="nav-item"><a href="./blog.php" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="./login.html" class="nav-link">Login</a></li>
+		<li class="nav-item"><a href="./index.php" class="nav-link">Contact Us</a></li>
            
       
     

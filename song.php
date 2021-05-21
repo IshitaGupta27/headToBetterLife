@@ -6,8 +6,7 @@ if(isset($_SESSION['username']) && !empty($_SESSION['username']))
 else
 {
     include './partials/_header.php' ;   
-}
-?>
+}?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,25 +32,12 @@ else
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/songstyle.css">
 </head>
-<?php
 
-  //session_start(); 
 
-    $server="localhost";
-    $username="root";
-    $password="";
-    $database="headtobetterlife";
-
-    $con= mysqli_connect($server,$username,$password,$database);
-    $sql="select * from songs";
-    //mysqli_select_db($con, $database);
-    $query= mysqli_query($con, $sql);
-    $number =1;    
-    ?>
 
 <body>
 
-     <!-- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
           <a class="navbar-brand" href="index.html">New Life</a>
           <div class="collapse navbar-collapse" id="ftco-nav">
@@ -66,10 +52,10 @@ else
             </ul>
           </div>
         </div>
-      </nav> -->
-    <!-- END nav -->
-
-    <section class="hero-wrap " style="background-image: url('images/music.jpg');" data-stellar-background-ratio="0.5">
+      </nav>
+    END nav -->
+    
+    <section class="hero-wrap" style="background-image: url('images/music.jpg');" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -82,24 +68,18 @@ else
     </section>
 
     <section class="ftco-section ftco-no-pb ftco-no-pt">
-    <?php
-
-    while($row = mysqli_fetch_array($query))
-    { 
-    $name = $row['SONG_NAME'];
-    $url = $row['URL'];
-    ?>  
+        
         <div class="container">
             <div class="row">
-                <!--<div class = "row2">-->
+                <div class = "row2">
                         <div class = "col-md-12">
-                            <a href = "<?php echo $url;?>" class = "album-poster">
+                            <a href = "https://www.youtube.com/watch?v=nkqVm5aiC28" class = "album-poster">
                                 <img src = "images/allthestar.jfif">
                             </a>
-                            <h4><?php echo $name; ?> </h4>
+                            <h4>All of the Stars</h4>
                         </div>
 
-                        <!--<div class = "col-md-12">
+                        <div class = "col-md-12">
                             <a href = "https://www.youtube.com/watch?v=eAfyFTzZDMM" class = "album-poster">
                                 <img src = "images/beautiful.jfif">
                             </a>
@@ -155,21 +135,18 @@ else
                                 <img src = "images/hero.jfif">
                             </a>
                             <h4>Hero</h4>
-                        </div>-->
-        <?php
-        $number++;
-    }
-    ?>                    
-                    <!--</div>-->
+                        </div>
+                        
+                    </div>
             </div>
         </div>
         
     </section>
 
-<?php include './partials/_footer.php'; ?>
 
-    <!--FOOTER-->
-    <!-- <footer class="ftco-footer">
+<!--
+    FOOTER
+    <footer class="ftco-footer">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-sm-12 col-md">
@@ -217,10 +194,9 @@ else
                 </div>
             </div>
         </div>
-    </footer> -->
-    <!-- <div id="aplayer"></div> -->
-
-
+    </footer>
+    -->
+    <?php include './partials/_footer.php'?>
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
@@ -255,7 +231,10 @@ else
         audio: [{
             name: 'Shreya Bucha',
             url: 'https://www.youtube.com/watch?v=P5WVaUajLm0',
-            cover: 'download.jfif'}] });
+            cover: 'download.jfif'
+    }]
+});
     </script>
 </body>
+
 </html>

@@ -67,6 +67,7 @@ else
             reports the learning experience, both the learning content and the learning process.
           </p>
           <p>Go ahead with your blog !</p>
+          <p><a href="./blog.php" style="color:white">View blogs</a></p>
           
         </div>
 

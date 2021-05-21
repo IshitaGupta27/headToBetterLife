@@ -50,7 +50,7 @@ else
                 <h2 class="exp-title">EXPERIENCE</h2>
                 <div class="exp-content">
                     <div class="person-image">
-                        <img src="images/addictive1.jpg" alt="Avatar">
+                        <img src="images/addictive1.jpeg" alt="Avatar">
                         <!--<br>
                         <p style="text-align: center;">NAME HERE</p>-->
                     </div>
