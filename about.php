@@ -1,3 +1,13 @@
+<?php  session_start();
+if(isset($_SESSION['username']) && !empty($_SESSION['username']))
+{
+    include './partials/_usernav.php';
+}
+else
+{
+    include './partials/_header.php' ;   
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,29 +31,39 @@
 </head>
 
 <body>
- <div class="wrap">
+<!--
+    <div class="wrap">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center">
                     <p class="mb-0 phone pl-md-2">
+                         <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a>
+                        <a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a> 
                     </p>
                 </div>
                 <div class="col-md-6 d-flex justify-content-md-end">
                     <div class="social-media">
                         <p class="mb-0 d-flex">
-                            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-paper-plane mr-1">headtobetterlife@gmail.com</span></a>
+                            -->
+                            <!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a> -->
+                            <!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a> -->
+                            <!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+
+                            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-paper-plane mr-1">youremail@email.com</span></a> -->
+                            <!-- <span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+ -->
+     <!-- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-          <a class="navbar-brand" href="index.html">Head to Better Life</a>
+          <a class="navbar-brand" href="index.php">Head to Better Life</a>
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
               <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Disease</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
@@ -53,21 +73,21 @@
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> -->
     <!-- END nav -->
 
-    <section class="hero-wrap" style="background-image: url('images/bg.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg.jpg');" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-end justify-content-center">
                 <div class="col-md-9 ftco-animate mb-5 text-center">
-<!--                     <p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>About us <i class="fa fa-chevron-right"></i></span></p>
+                    <!-- <p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.php">Home <i class="fa fa-chevron-right"></i></a></span> <span>About us <i class="fa fa-chevron-right"></i></span></p>
                     <h1 class="mb-0 bread">You Are Not Alone</h1> -->
                 </div>
             </div>
         </div>
     </section>
-
+    <br/> <br/> <br/> 
     <section class="ftco-section ftco-no-pb ftco-no-pt">
         <div class="container">
             <div class="row">
@@ -81,8 +101,8 @@
                         <p>Healthy Minds,Healthy Life helps you to help yourself. It is a small independent student initiative to aware people about mental health issues and guide them. </p>
                         <p>Our team is committed to creating and delivering the highest quality mental health literacy information, events information and resources. Our materials are provided in a variety of mediums that include videos, articles,brochures,books,songs,
                             and discussion forums. Our materials are specifically designed to meet the needs of youth, young adults, families, educators, community agencies and health care providers.</p>
-<!-- 
-                        <a href="https://youtu.be/AcV10oWZMzU" class="play-video popup-vimeo d-flex align-items-center mt-4">
+
+                        <!-- <a href="https://youtu.be/AcV10oWZMzU" class="play-video popup-vimeo d-flex align-items-center mt-4">
                             <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-play"></span></div>
                             <span class="watch">Mental Health Awareness Video</span>
                         </a> -->
@@ -92,6 +112,7 @@
             </div>
         </div>
     </section>
+    <br/> <br/> <br/>
 <!--
     <section class="ftco-counter ftco-section ftco-no-pt ftco-no-pb img bg-light" id="section-counter">
         <div class="container">
@@ -135,7 +156,7 @@
 -->
 
 
-    <footer class="ftco-footer">
+    <!-- <footer class="ftco-footer">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-sm-12 col-md">
@@ -145,7 +166,7 @@
                         <ul class="ftco-footer-social list-unstyled mt-2">
                             <!-- <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
                             <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
-                            <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li> -->
+                            <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -154,9 +175,9 @@
                         <h2 class="ftco-heading-2">Explore</h2>
                         <ul class="list-unstyled">
                             <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
-                            <li><a href="index.html"><span class="fa fa-chevron-right mr-2"></span>Services</a></li>
+                            <li><a href="index.php"><span class="fa fa-chevron-right mr-2"></span>Services</a></li>
                             <!--<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>What We Do</a></li>-->
-                            <!-- <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Plans &amp; Pricing</a></li> -->
+                            <!-- <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Plans &amp; Pricing</a></li>
                         </ul>
                     </div>
                 </div>
@@ -172,7 +193,7 @@
                         </ul>
                     </div>
                 </div>
-            -->
+            
                 <div class="col-sm-12 col-md">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">Have a Questions?</h2>
@@ -203,8 +224,8 @@
                 </div>
             </div>
         </div>
-    </footer>
-
+    </footer> -->
+    <?php include './partials/_footer.php'?>
 
 
     <!-- loader -->

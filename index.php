@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,9 +13,45 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
+	<style>
+		.dropbtn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    .dropdown:hover .dropbtn {background-color: #3e8e41;}
+	</style>
   </head>
   <body>
-	  <div class="wrap">
+  <div class="wrap">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center">
@@ -34,16 +71,30 @@
 
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Head to Better Life</a>
+	      <a class="navbar-brand" href="index.php">Head to Better Life</a>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-	          <li class="nav-item"><a href="#" class="nav-link">Disease</a></li>
-	          <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
-	          <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
-	          <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+			<?php 
+				if(isset($_SESSION['username']) && !empty($_SESSION['username']))
+				{ 
+			?>
+				<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="about.php" class="nav-link">About Us</a></li>
+	          <li class="nav-item"><a href="#disease" class="nav-link">Disease</a></li>
+	          <li class="nav-item"><a href="book.php" class="nav-link">Books</a></li>
+	          <li class="nav-item"><a href="songs.php" class="nav-link">Music</a></li>
+			  <li class="nav-item"><a href="forum.php" class="nav-link">Discussion Forum</a></li>
+	          <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="./php/logout.php" class="nav-link">Logout</a></li>
+			  Welcome, <?php echo $_SESSION['username']; ?>
+			<?php } 
+			else { ?>
+	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="about.php" class="nav-link">About Us</a></li>
+			  <li class="nav-item"><a href="#disease" class="nav-link">Disease</a></li>
+	          <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+			<?php } ?>
 	        </ul>
 	      </div>
 	    </div>
@@ -56,9 +107,9 @@
         <div class="row no-gutters slider-text align-items-center">
           <div class="col-md-6 ftco-animate d-flex align-items-end">
           	<div class="text w-100">
-<!-- 	            <h1 class="mb-4">Revitalized Minds</h1>
+	            <!-- <h1 class="mb-4">Revitalized Minds</h1>
 	            <p class="mb-4">Some of the most comforting words in the universe are ‘me too.’ That moment when you find out that your struggle is also someone else’s struggle, that you’re not alone, and that others have been down the same road.</p> -->
-	            <p><a href="about.html" class="btn btn-primary py-3 px-4">About us</a> <a href="#send_message" class="btn btn-white py-3 px-4">Contact Us</a></p>
+	            <p><a href="about.php" class="btn btn-primary py-3 px-4">About us</a> <a href="#send_message" class="btn btn-white py-3 px-4">Contact Us</a></p>
             </div>
           </div>
           
@@ -184,7 +235,7 @@
 			</div>
 		</section>
 
-		<section class="ftco-section">
+		<section class="ftco-section" id="disease">
 			<div class="container">
 				<div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center heading-section ftco-animate">
@@ -251,7 +302,7 @@
 								of the worry. It can take some time to find the right treatment that works for you. If you have more than one anxiety 
 								disorder, you may need several kinds of treatment. For most people with anxiety disorders, a combination of medicine 
 								and counseling is best. With proper care and treatment, you can learn how to manage your symptoms and thrive.
-								<a href="anxiety.html"><span style = "color : blue">Read More</a>
+								<a href="anxiety.php"><span style = "color : blue">Read More</a>
 							</p>
 						  </div>
 						  <div class="tab-pane container p-0 fade" id="services-2">
@@ -267,7 +318,7 @@
 								emotional symptoms between episodes, some may not experience any. Although bipolar disorder is a lifelong 
 								condition, you can manage your mood swings and other symptoms by following a treatment plan. In most cases, 
 								bipolar disorder is treated with medications and psychological counseling (psychotherapy). 
-								<a href="bipolar.html"><span style = "color : blue">Read More</a>
+								<a href="bipolar.php"><span style = "color : blue">Read More</a>
 							  </p>
 						  </div>
 						  <div class="tab-pane container p-0 fade" id="services-3">
@@ -297,7 +348,7 @@ Signs alcohol or drug use may be a problem :-
 6) social withdrawal
 7) mood swings
 8) failing relationships with friends and family
-9) impaired performance at school or work . <a href="Addictive_Disorders.html"><span style = "color : blue">Read More</a>
+9) impaired performance at school or work . <a href="Addictive_Disorders.php"><span style = "color : blue">Read More</a>
 </p>
 						  </div>
 						  <div class="tab-pane container p-0 fade" id="services-5">
@@ -316,7 +367,7 @@ Signs alcohol or drug use may be a problem :-
 								 An eating disorder can take over your life, and it may seem too big to deal with. But it is 
 								 important to remember that all eating disorders can be treated, and full recovery is possible 
 								 at every age.
-								 <a href="Eating_Disorder.html"><span style = "color : blue">Read More</a>
+								 <a href="Eating_Disorder.php"><span style = "color : blue">Read More</a>
 							  </p>
 						  </div>
 						  <div class="tab-pane container p-0 fade" id="services-6">
@@ -336,7 +387,7 @@ Signs alcohol or drug use may be a problem :-
 								characterized primarily by recurrent body-focused repetitive
 								behavior (e.g., hair pulling, skin-picking) and repeated attempts
 								to decrease or stop the behaviors.
-								<a href="OCD.html"><span style = "color : blue">Read More</a>
+								<a href="OCD.php"><span style = "color : blue">Read More</a>
 							  </p>
 						  </div>
 						  <div class="tab-pane container p-0 fade" id="services-7">
@@ -354,7 +405,7 @@ Signs alcohol or drug use may be a problem :-
 								disorders can be long-lasting. Personality disorders affect at least two of these areas: Way of 
 								thinking about oneself and others , Way of responding emotionally , Way of relating to other people, 
 								Way of controlling one’s behavior. 
-							   <a href="Personaliy_Disorder.html"><span style = "color : blue">Read More</a>
+							   <a href="Personaliy_Disorder.php"><span style = "color : blue">Read More</a>
 							</p>
 							</div>
 							<div class="tab-pane container p-0 fade" id="services-8">
@@ -376,7 +427,7 @@ Signs alcohol or drug use may be a problem :-
 									with schizophrenia withdraw from the outside world, act out in confusion and fear, and are at an 
 									increased risk of attempting suicide, especially during psychotic episodes, periods of depression, 
 									and in the first six months after starting treatment.
-								   <a href="Schizophrenia.html"><span style = "color : blue">Read More</a>
+								   <a href="Schizophrenia.php"><span style = "color : blue">Read More</a>
 								</p>
 							</div>
 						<div class="tab-pane container p-0 fade" id="services-9">
@@ -399,7 +450,7 @@ Signs alcohol or drug use may be a problem :-
 								physical neglect can cause problems when they are prolonged or not addressed by caring adults. Even a 
 								move or the birth of a sibling can be a stressor that can cause significant difficulties for some 
 								children.
-							   <a href="Trauma.html"><span style = "color : blue">Read More</a>
+							   <a href="Trauma.php"><span style = "color : blue">Read More</a>
 							</p>
 						</div>
 						<div class="tab-pane container p-0 fade" id="services-10">
@@ -434,7 +485,7 @@ Signs alcohol or drug use may be a problem :-
 				  In this fact sheet, we will discuss the grief related to death and dying, and grief associated with chronic illness. 
 				  It is natural to grieve the death of a loved one before, during, and after the actual time of their passing. 
 				  The process of accepting the unacceptable is what grieving is all about.
-							   <a href="loss.html"><span style = "color : blue">Read More</a>
+							   <a href="loss.php"><span style = "color : blue">Read More</a>
 							</p>
 						</div>
 						<div class="tab-pane container p-0 fade" id="services-11">
@@ -454,7 +505,7 @@ Signs alcohol or drug use may be a problem :-
                 way of dealing with life’s difficulties. This means that it is important to talk to someone as 
                 early as possible to get the right support and help. Learning new coping strategies to deal with
                  these difficulties can make it easier to break the cycle of self-harm in the long term.
-							   <a href="selfharm.html"><span style = "color : blue">Read More</a>
+							   <a href="selfharm.php"><span style = "color : blue">Read More</a>
 							</p>
 						</div>
 						<div class="tab-pane container p-0 fade" id="services-12">
@@ -471,7 +522,7 @@ Signs alcohol or drug use may be a problem :-
                  effective in many cases, but the first step is to ask for help. If a loved one 
                  is having these thoughts or talking about suicide, it is essential to take 
                  action to help and protect them.
-							   <a href="sucide.html"><span style = "color : blue">Read More</a>
+							   <a href="sucide.php"><span style = "color : blue">Read More</a>
 							</p>
 						</div>
 						<div class="tab-pane container p-0 fade" id="services-13">
@@ -485,7 +536,7 @@ Signs alcohol or drug use may be a problem :-
               that results in, or is likely to result in, physical, sexual or psychological harm or suffering to women.” The act 
               of violence may occur in family, general community, or even being perpetrated and condoned by state. It has serious
                health consequences – not just for women and children but also for their family.
-							   <a href="domesticviolence.html"><span style = "color : blue">Read More</a>
+							   <a href="domesticviolence.php"><span style = "color : blue">Read More</a>
 							</p>
 						</div>
 
@@ -622,22 +673,22 @@ Signs alcohol or drug use may be a problem :-
 
   -->
 		
-		<section class="ftco-appointment ftco-section img" >
+		<section class="ftco-appointment ftco-section img" id="send_message" >
 			<div class="overlay"></div>
     	<div class="container">
     		<div class="row">
     			<div class="col-md-6 half ftco-animate">
     				<h2 class="mb-4">Send a Message &amp; Get in touch!</h2>
-    				<form action="submit_message.php" class="appointment">
+    				<form action="./php/submit_message.php" class="appointment" method="POST">
     					<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-			              <input type="text" class="form-control" name = "name" placeholder="Your Name">
+			              <input type="text" name="name" id="name" class="form-control" placeholder="Your Name">
 			            </div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-			              <input type="text" class="form-control" name = "email" placeholder="Email">
+			              <input type="text" class="form-control" name="email" id="email" placeholder="Email">
 			            </div>
 								</div>
 								<div class="col-md-12">
@@ -645,21 +696,21 @@ Signs alcohol or drug use may be a problem :-
 			    					<div class="form-field">
 	          					<div class="select-wrap">
 	                      <div class="icon"><span class="fa fa-chevron-down"></span></div>
-	                      <select name="disease" id="" class="form-control">
-	                      	<option value="">Services</option>
-	                        <option value="Anxiety">Anxiety Disorders</option>
-	                        <option value="BRD">Bipolar and Related Disorders</option>
-	                        <option value="Depressive">Depressive Disorders</option>
-	                        <option value="Addictive">Addictive Disorders</option>
-	                        <option value="Eating">Eating Disorders</option>
-	                        <option value="OCRD">Obsessive-Compulsive and Related Disorders</option>
-							<option value="Personality">Personality Disorders</option>
-							<option value="SPD">Schizophrenia and Psychotic Disorders</option>
-							<option value="Trauma">Trauma and Stress Related Disorders</option>
-							<option value="Grief">Grief and loss when caring</option>
-							<option value="Self_harm">Self Harm</option>
-							<option value="Suicidal">Suicidal Thoughts</option>
-							<option value="Domestic_violence">Domestic Violence</option>
+	                      <select name="disease" id="disease" class="form-control">
+	                      	<option name="disease" id="disease" value="Services">Services</option>
+	                        <option name="disease" id="disease" value="Anxiety Disorders">Anxiety Disorders</option>
+	                        <option name="disease" id="disease" value="Bipolar and Related Disorders">Bipolar and Related Disorders</option>
+	                        <option name="disease" id="disease" value="Depressive Disorders">Depressive Disorders</option>
+	                        <option name="disease" id="disease" value="Addictive Disorders">Addictive Disorders</option>
+	                        <option name="disease" id="disease" value="Eating Disorders">Eating Disorders</option>
+	                        <option name="disease" id="disease" value="Obsessive-Compulsive and Related Disorders">Obsessive-Compulsive and Related Disorders</option>
+							<option name="disease" id="disease" value="Personality Disorders">Personality Disorders</option>
+							<option name="disease" id="disease" value="Schizophrenia and Psychotic Disorders">Schizophrenia and Psychotic Disorders</option>
+							<option name="disease" id="disease" value="Trauma and Stress Related Disorders">Trauma and Stress Related Disorders</option>
+							<option name="disease" id="disease" value="Grief and loss when caring">Grief and loss when caring</option>
+							<option name="disease" id="disease" value="Self Harm">Self Harm</option>
+							<option name="disease" id="disease" value="Suicidal Thoughts">Suicidal Thoughts</option>
+							<option name="disease" id="disease" value="Domestic Violence">Domestic Violence</option>
 	                      </select>
 	                    </div>
 			              </div>
@@ -667,12 +718,12 @@ Signs alcohol or drug use may be a problem :-
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-			              <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+			              <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
 			            </div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-			              <input type="submit" value="Send message" class="btn btn-primary py-3 px-4">
+			              <input type="submit" id="Submit" name="Submit" value="Send message" class="btn btn-primary py-3 px-4">
 			            </div>
 								</div>
     					</div>
@@ -750,9 +801,9 @@ Signs alcohol or drug use may be a problem :-
           </div>
         </div>
       </div>
-    </section>	
+    </section>
 
-    <footer class="ftco-footer">
+	<footer class="ftco-footer">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-sm-12 col-md">
@@ -770,7 +821,7 @@ Signs alcohol or drug use may be a problem :-
                     <div class="ftco-footer-widget mb-4 ml-md-4">
                         <h2 class="ftco-heading-2">Explore</h2>
                         <ul class="list-unstyled">
-                            <li><a href="about.html"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
+                            <li><a href="about.php"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
                             <li><a href="#services"><span class="fa fa-chevron-right mr-2"></span>Services</a></li>
                             <!--<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>What We Do</a></li>-->
                             <!-- <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Plans &amp; Pricing</a></li> -->
@@ -817,7 +868,7 @@ Signs alcohol or drug use may be a problem :-
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>  
   
 
   <!-- loader -->

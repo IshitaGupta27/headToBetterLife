@@ -1,3 +1,13 @@
+<?php  session_start();
+if(isset($_SESSION['username']) && !empty($_SESSION['username']))
+{
+    include './partials/_usernav.php';
+}
+else
+{
+    include './partials/_header.php' ;   
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +35,7 @@
 </head>
 <?php
 
-  session_start(); 
+  //session_start(); 
 
     $server="localhost";
     $username="root";
@@ -40,27 +50,10 @@
     ?>
 
 <body>
-    <div class="wrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 d-flex align-items-center">
-                    <p class="mb-0 phone pl-md-2">
-                    </p>
-                </div>
-                <div class="col-md-6 d-flex justify-content-md-end">
-                    <div class="social-media">
-                        <p class="mb-0 d-flex">
-                            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-paper-plane mr-1">headtobetterlife@gmail.com</span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+     <!-- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-          <a class="navbar-brand" href="index.html">Head to Better Life</a>
+          <a class="navbar-brand" href="index.html">New Life</a>
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
@@ -73,16 +66,16 @@
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> -->
     <!-- END nav -->
 
-    <section class="hero-wrap " style="background-image: url('images/music.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap" style="background-image: url('images/music.jpg');" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-end justify-content-center">
                 <div class="col-md-9 ftco-animate mb-5 text-center">
-                    <!-- <p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>About us <i class="fa fa-chevron-right"></i></span></p> -->
-<!--                     <h1 class="mb-0 bread">"Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything"</h1> -->
+                    <!-- <p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>About us <i class="fa fa-chevron-right"></i></span></p> 
+                    <h1 class="mb-0 bread">"Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything"</h1>-->
                 </div>
             </div>
         </div>
@@ -173,10 +166,10 @@
         
     </section>
 
-
+<?php include './partials/_footer.php'; ?>
 
     <!--FOOTER-->
-    <footer class="ftco-footer">
+    <!-- <footer class="ftco-footer">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-sm-12 col-md">
@@ -224,7 +217,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <!-- <div id="aplayer"></div> -->
 
 

@@ -1,3 +1,13 @@
+<?php  session_start();
+if(isset($_SESSION['username']) && !empty($_SESSION['username']))
+{
+    include './partials/_usernav.php';
+}
+else
+{
+    include './partials/_header.php' ;   
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,24 +36,7 @@
      
   </head>
   <body>
-     <div class="wrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 d-flex align-items-center">
-                    <p class="mb-0 phone pl-md-2">
-                    </p>
-                </div>
-                <div class="col-md-6 d-flex justify-content-md-end">
-                    <div class="social-media">
-                        <p class="mb-0 d-flex">
-                            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-paper-plane mr-1">headtobetterlife@gmail.com</span></a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <nav
+    <!-- <nav
       class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
       id="ftco-navbar"
     >
@@ -63,7 +56,7 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
     <!-- END nav -->
 
     <!--banner image-->
@@ -368,7 +361,8 @@
 
       </div>
     </div>
-    <footer class="ftco-footer">
+    <?php include './partials/_footer.php'?>
+    <!-- <footer class="ftco-footer">
       <div class="container">
         <div class="row mb-5">
           <div class="col-sm-12 col-md">
@@ -439,7 +433,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <script type="text/javascript" src="js/diseaseJs.js" charset="utf-8"></script>
   </body>

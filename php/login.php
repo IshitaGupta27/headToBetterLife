@@ -20,9 +20,13 @@
 		// table name - > userAccount
 		$sql = "SELECT * FROM `useraccount`WHERE (`email`='$email' and `password`='$password')";
         $query = mysqli_query($con,$sql);
+		$row = mysqli_fetch_array($query);
 	    $rowcount=mysqli_num_rows($query);
-		if($rowcount){
-			//header('location:../index.html');
+		if($rowcount>0){
+			session_start();
+			$_SESSION['username'] = $row['name'];
+			//echo $_SESSION['username'];
+			header('location:../index.php');
 		}
 		else
 		{

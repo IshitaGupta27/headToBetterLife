@@ -1,3 +1,13 @@
+<?php  session_start();
+if(isset($_SESSION['username']) && !empty($_SESSION['username']))
+{
+    include './partials/_usernav.php';
+}
+else
+{
+    include './partials/_header.php' ;   
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +31,7 @@
 </head>
 <?php
 
-  session_start(); 
+  //session_start(); 
 
     $server="localhost";
     $username="root";
@@ -37,31 +47,31 @@
 
 <body>
 
-<div class="wrap">
+<!-- <div class="wrap">
     <div class="container">
         <div class="row">
             <div class="col-md-6 d-flex align-items-center">
                 <p class="mb-0 phone pl-md-2">
-                    <!-- <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a>
-                    <a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a> -->
+                    <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a>
+                    <a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
                 </p>
             </div>
             <div class="col-md-6 d-flex justify-content-md-end">
                 <div class="social-media">
                     <p class="mb-0 d-flex">
-                        <!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a> -->
-                        <!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a> -->
-                        <!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a> -->
+                        <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                        <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a> 
+                        <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a> 
                         <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-paper-plane mr-1">headtobetterlife@gmail.com</span></a>
-                        <!-- <span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a> -->
+                        <span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+<!-- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="index.html">Head To Better Life</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,14 +90,14 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->
 
 <div class="hero-wrap " style="background-image: url('images/book.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
 
-<!--         <h1 style="text-align:center;color:aliceblue">“Books are the quietest and most constant of friends; they are the most accessible and wisest of counselors, and the most patient of teachers.”
-        </h1> -->
+        <!-- <h1 style="text-align:center;color:aliceblue">“Books are the quietest and most constant of friends; they are the most accessible and wisest of counselors, and the most patient of teachers.” 
+        </h1>-->
     </div>
 </div>
 
@@ -194,8 +204,8 @@ while($row = mysqli_fetch_array($query))
     </ul>
 
 
-
-    <footer class="ftco-footer">
+    <?php include './partials/_footer.php'?>
+    <!-- <footer class="ftco-footer">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-sm-12 col-md">
@@ -205,7 +215,7 @@ while($row = mysqli_fetch_array($query))
                         <ul class="ftco-footer-social list-unstyled mt-2">
                             <!-- <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
                             <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
-                            <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li> -->
+                            <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li> 
                         </ul>
                     </div>
                 </div>
@@ -216,7 +226,7 @@ while($row = mysqli_fetch_array($query))
                             <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
                             <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
                             <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>What We Do</a></li>
-                            <!-- <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Plans &amp; Pricing</a></li> -->
+                            <!-- <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Plans &amp; Pricing</a></li>
                         </ul>
                     </div>
                 </div>
@@ -228,7 +238,7 @@ while($row = mysqli_fetch_array($query))
                             <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About Us</a></li>
                             <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
                             <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
-                            <!-- <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Careers</a></li> -->
+                            <!-- <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Careers</a></li>
                         </ul>
                     </div>
                 </div>
@@ -237,7 +247,7 @@ while($row = mysqli_fetch_array($query))
                         <h2 class="ftco-heading-2">Have a Questions?</h2>
                         <div class="block-23 mb-3">
                             <ul>
-                                <!-- <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li> -->
+                                <!-- <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li> 
                                 <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+1234567889</span></a></li>
                                 <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">headtobetterlife@gmail.com</span></a></li>
                             </ul>
@@ -259,7 +269,7 @@ while($row = mysqli_fetch_array($query))
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
 
 
