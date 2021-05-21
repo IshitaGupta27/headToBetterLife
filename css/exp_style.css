@@ -149,17 +149,27 @@ display-flex, .display-flex, .display-flex-center,.exp-content {
     -ms-border-radius: 20px; */}
 
 .exp-content {
-    padding: 15px; }
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column; }
 
+
+/*changeddddd*/
 .person-image {
-    margin-left: 20px;
-    margin-right: 20px;
-    width: auto;
-    text-align: center; }
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 100%;
+
+
+     }
 
 .exp-text {
-    margin-left: 60px;
-    margin-right: 60px; }
+    min-width: 100%;
+    margin: auto;
+    text-align: justify; }
+
 
 h2 {
     line-height: 1.66;
@@ -170,14 +180,20 @@ h2 {
     font-family: Poppins;
     font-size: 36px; }
 
+    
+
 .exp-title {
     margin-bottom: 33px;
     text-align: center; }
 
 img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; }
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    margin-bottom: 30px;
+    /*margin-top: 20%;*/
+    /*object-fit: contain; }*/
+}
 
 /*.avatar{
     vertical-align: middle;
@@ -187,9 +203,13 @@ figure {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    background-color: #f8f8f8; }
+    background-color: #f8f8f8;
+    padding: 10px;
+    padding-top: 10px;
+     }
       
 p {
+
     margin-bottom: 0px;
     font-size: 15px;
     color: #777; }
